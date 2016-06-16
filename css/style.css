@@ -3,10 +3,10 @@ header {
 }
 
 body {
-background-image: url('../images/background-image.jpg');
-background-repeat: no-repeat;
-background-size: cover;
-/*font-family: ;*/
+	background-image: url('../images/background-image.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	font-family: 'PT Serif', sans-serif;
 }
 
 .main {
@@ -16,6 +16,8 @@ background-size: cover;
 	opacity: .5;
 	border: black 3px solid;
 	border-radius: 10px;
+	margin: 4.5em auto;
+	padding: 0px 4em;
 }
 
 .questions-text,
@@ -23,7 +25,28 @@ background-size: cover;
 	display: none;
 }
 
-h1 { 
-color: red;
+h2, h3 {
+	text-align:center;
+	max-width: 350px;
+	margin-left: auto;
+	margin-right: auto;
+}
 
+form {
+	text-align: left;
+}
+
+button {
+	padding: 2em 3em;
+	background-color: green;
+	font-weight: bold;
+	color: white;
+	font-size: 14px;
+	border-radius: 10px;
+	border: none;
+}
+
+.button {
+	text-align: center;
+	margin-top: 2em;
 }

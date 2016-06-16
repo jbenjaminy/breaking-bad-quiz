@@ -98,6 +98,12 @@ var questionsArr = [
     }
 ];
 
+function rightAnswer() {
+    $("#yeah")[0].volume = 0.3;
+    $("#yeah")[0].load();
+    $("#yeah")[0].play();
+};
+
 // Extra:
 //     Shows the user their current score as they move through the quiz
 //     Shows the user if their response is correct or not when they answer each question
