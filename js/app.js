@@ -1,23 +1,36 @@
 // questions array
-
+    var questionsAnswers = [
     // question 1
-    questionText: What location didn’t Walter and Jesse not cook in?
-    answerChoices: A laundromat, The high school lab, An RV, People’s homes
-    correctAnswer: 1
-    questionText: Who killed Gus?
-    answerChoices: Jesse, Hector, Walter jr., Saul
-    correctAnswer: 1
-    questionText: What writer is quoted in the small book Hank finds in Walters bathroom?
-    answerChoices: Walt Whitman, George R.R Martin, Jayden Smith, Edgar Allan Poe
-    correctAnswer: 0
-    questionText: How does Walter know Jesse?
-    answerChoices: Met him at a riding go-karts, Former racquetball partners, Skylar’s former lover, Walter was his chemistry teacher
-    correctAnswer: 3
-    questionText: What is Jesse’s favorite word?
-    answerChoices: “Noodles!”, “B*tch!”, “Dawg”, “Zoinks!”
-    correctAnswer: 2     
-
-
+        {
+            questionText: What location didn’t Walter and Jesse not cook in?
+            answerChoices: A laundromat, The high school lab, An RV, People’s homes
+            correctAnswer: 1
+        },
+    // question 2
+        {
+            questionText: Who killed Gus?
+            answerChoices: Jesse, Hector, Walter jr., Saul
+            correctAnswer: 1
+        },
+    // question 3
+        {
+            questionText: What writer is quoted in the small book Hank finds in Walters bathroom?
+            answerChoices: Walt Whitman, George R.R Martin, Jayden Smith, Edgar Allan Poe
+            correctAnswer: 0
+        },
+    // question 4
+        {
+            questionText: How does Walter know Jesse?
+            answerChoices: Met him at a riding go-karts, Former racquetball partners, Skylar’s former lover, Walter was his chemistry teacher
+            correctAnswer: 3
+        },
+    // question 5
+        {
+            questionText: What is Jesse’s favorite word?
+            answerChoices: “Noodles!”, “B*tch!”, “Dawg”, “Zoinks!”
+            correctAnswer: 2     
+        }
+    ];
 // Spoiler Alert
 // Requirements:
 //     Requires the user to answer at least five questions
