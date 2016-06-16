@@ -19,11 +19,12 @@ $(document).ready(function(event){
             questionNumber++;
             nextQuestion();
         } 
-        // on last question - displays results
+        // on last question - displays results & plays sound clip
         else {
             $(".main").hide();
             $(".results-text").show();
             $(".score").text("You got " + answersCorrect + " correct!");
+            soundClip();
         }
     }); 
 
@@ -52,7 +53,7 @@ function nextQuestion() {
     // deletes existing answer choices and prints new choices
     $(".answer-choices").empty();
     for (var i = 0; i < totalAnswers; i++) {
-        var newAnswerList = "<input class='choices' name='choices' type='radio' value=" + i + ">" + questionsArr[questionNumber].answerChoices[i] + "<br>";
+        var newAnswerList = "<input class='choices' name='choices' type='radio' value=" + i + ">" + " " + questionsArr[questionNumber].answerChoices[i] + "<br>";
         $(".answer-choices").append(newAnswerList);
     }
 }
@@ -68,26 +69,26 @@ function checkAnswer() {
 var questionsArr = [
 // question 1 
     {
-        questionText: "What location didn’t Walter and Jesse not cook in?",
-        answerChoices: ["A laundromat", "The high school lab", "An RV", "People’s homes"],
+        questionText: "Walt and Jesse cooked in all of these locations, except:",
+        answerChoices: ["A laundromat", "The high-school lab", "Jesse's RV", "Random people’s homes"],
         correctAnswer: 1
     },
 // question 2
     {
         questionText: "Who killed Gus?",
-        answerChoices: ["Jesse", "Hector", "Walter jr.", "Saul"],
+        answerChoices: ["Jesse Pinkman", "Hector Salamanca", "Walter Jr.", "Saul Goodman"],
         correctAnswer: 1
     },
 // question 3
     {
-        questionText: "What writer is quoted in the small book Hank finds in Walters bathroom?",
-        answerChoices: ["Walt Whitman", "George R.R Martin", "Jayden Smith", "Edgar Allan Poe"],
+        questionText: "Which writer did Gale Boetticher quote in his lab notebook?",
+        answerChoices: ["Walt Whitman", "George RR Martin", "Jaden Smith", "Edgar Allan Poe"],
         correctAnswer: 0
     },
 // question 4
     {
-        questionText: "How does Walter know Jesse?",
-        answerChoices: ["Met him at a riding go-karts", "Former racquetball partners", "Skylar’s former lover", "Walter was his chemistry teacher"],
+        questionText: "How did Walt know Jesse?",
+        answerChoices: ["Met him riding go-karts", "Former racquetball partners", "Skylar had an affair with Jesse", "Walt was Jesse's teacher"],
         correctAnswer: 3
     },
 // question 5
@@ -98,15 +99,8 @@ var questionsArr = [
     }
 ];
 
-function rightAnswer() {
+function soundClip() {
     $("#yeah")[0].volume = 0.3;
     $("#yeah")[0].load();
     $("#yeah")[0].play();
 };
-
-// Extra:
-//     Shows the user their current score as they move through the quiz
-//     Shows the user if their response is correct or not when they answer each question
-//     Display the correct answer if the user guessed incorrectly
-//     Display some information related to the correct answer
-//     Instead of a standard multiple choice quiz, build a personality quiz
