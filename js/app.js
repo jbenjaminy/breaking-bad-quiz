@@ -32,8 +32,8 @@
         }
     ];
 
-var questionNumber = 1;
-var correctAnswers = 0
+var questionNumber = 0;
+var correctAnswers = 0;
 
 $(document).ready(function(event){
     $(".main").hide();
@@ -42,39 +42,55 @@ $(document).ready(function(event){
     $("body").on('click', '.start-button', function(event){
         $(".main").hide();
         $(".questions-text").show();
-        startQuiz();
+        nextQuestion();
     });
+
+    $(".answer-choices").on('click', '.choices', function(event){
+        if (questionNumber !== 5) {
+        questionNumber++;
+        nextQuestion();
+        } 
+        else {
+            $(".main").hide();
+            $(".results-text").show();
+        }
+    }); 
+
+
 
     // on click to submit answer
         // increment question number
         // iterate to next question
         // adjust corrects answers var
-
 });
 
-if (value === "0"){
-    $(".")
-}
 
-// Hide Quiz game and Show Results
-// function hideMain() {
-// }
+    // Hide Quiz game and Show Results
+    // function hideMain() {
+    // }
 
-// // Start the quiz button function
-function startQuiz(){
-    $(".question").text(questionsArr[0].questionText);
-    $(".question-number").text("Question " + questionNumber + " of 5")
-
-    // $(".answer-choices").append(questionsArr[0].answerChoices[0]);
-}
+    // Load next question and answers
+    function nextQuestion() {
+        $(".question").text(questionsArr[questionNumber].questionText);
+        $(".question-number").text("Question " + (questionNumber + 1) + " of 5");
+        $(".answer-choices").empty();
+        var totalAnswers = 4;
+        for (var i = 0; i < totalAnswers; i++) {
+            var newAnswerList = "<input class='choices' type='radio' value=" + i + ">" + questionsArr[questionNumber].answerChoices[i] + "<br>";
+            $(".answer-choices").append(newAnswerList);
+        }
+    }
 
 // // Add to question counter and check if right answer
 // function questionCounter(){
 // }
 
-// // Go to next question after next button 
-// function nextQuestion() {
-// }
+
+
+
+
+
+
 
 // Spoiler Alert
 // Requirements:

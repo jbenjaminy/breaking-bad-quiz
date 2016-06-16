@@ -18,10 +18,7 @@ background-size: cover;
 	border-radius: 10px;
 }
 
-.questions-text {
-	display: none;
-}
-
+.questions-text,
 .results-text {
 	display: none;
 }
