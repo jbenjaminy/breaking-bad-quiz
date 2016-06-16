@@ -62,6 +62,7 @@ function checkAnswer() {
     var userAnswer = $('.answer-choices').find('input[name=choices]:checked').val();
     if (userAnswer == questionsArr[questionNumber].correctAnswer) {
         answersCorrect += 1;
+        soundClip2();
     }
 }
 
@@ -100,7 +101,13 @@ var questionsArr = [
 ];
 
 function soundClip() {
-    $("#yeah")[0].volume = 0.3;
+    $("#yeah")[0].volume = 0.4;
     $("#yeah")[0].load();
     $("#yeah")[0].play();
+};
+
+function soundClip2() {
+    $("#right")[0].volume = 0.4;
+    $("#right")[0].load();
+    $("#right")[0].play();
 };
