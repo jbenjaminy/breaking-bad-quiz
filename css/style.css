@@ -1,3 +1,32 @@
-.results {
+header {
+	text-align: center;
+}
+
+body {
+background-image: url('../images/background-image.jpg');
+background-repeat: no-repeat;
+background-size: cover;
+/*font-family: ;*/
+}
+
+.main {
+	max-width: 400px;
+	min-height: 300px;
+	background-color: lightgray;
+	opacity: .5;
+	border: black 3px solid;
+	border-radius: 10px;
+}
+
+.questions-text {
 	display: none;
+}
+
+.results-text {
+	display: none;
+}
+
+h1 { 
+color: red;
+
 }

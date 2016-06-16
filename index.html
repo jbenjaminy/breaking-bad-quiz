@@ -3,34 +3,40 @@
 <head>
 	<meta charset="UTF-8">
 	<title>The Walking Dead Quiz</title>
-	<link rel="stylesheet" type="text/css" href="/css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
 	<header>
 		<h1>Breaking Bad Quiz</h1>
+	</header>
+						<!-- INITIAL DISPLAY -->
+	<section class="main opening-text">
 		<h3>Test your knowledge on the hit show:</h3>
 		<h3>WARNING: This quiz contains spoilers</h3>
 		<button class="start-button">Start Quiz</button>
-	</header>
+	</section>
 
 						<!-- QUESTIONS DISPLAY -->
-	<section class="questions">
+	<section class="main questions-text">
 		<div>
-			<h2 class="question-text"></h2>
-			<h3 class="question-number">1 of 5</h3>	
+			<h2 class="question"></h2>
+			<h3 class="question-number"></h3>	
 		</div>
 		<div>
 			<form class="answer-choices">
-				<input class="choices" name="choice" type="radio" value="0">
+				<input class="choice" name="choice" type="radio" value="0">
+				<br>
 				<input class="choices" name="choice" type="radio" value="1">
+				<br>
 				<input class="choices" name="choice" type="radio" value="2">
-				<input class="choices" name="choice" type="radio" value="2">
+				<br>
+				<input class="choices" name="choice" type="radio" value="3">
 			</form>
 		</div>
 	</section>
 
 						<!--  RESULTS DISPLAY -->
-	<section class="results">
+	<section class="main results-text">
 		<div class="score-display">
 			<h2 class="score">You've got 5 out of 5!</h2>
 			<button class="play-again">Play Again</button>
@@ -41,7 +47,7 @@
 
 
 	<script src="http://code.jquery.com/jquery.min.js"></script>
-	<script type="text/javascript" src="/js/app.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
 </body>
 
 </html>

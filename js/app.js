@@ -1,36 +1,81 @@
 // questions array
-    var questionsAnswers = [
-    // question 1
+    var questionsArr = [
+    // question 1 
         {
-            questionText: What location didn’t Walter and Jesse not cook in?
-            answerChoices: A laundromat, The high school lab, An RV, People’s homes
+            questionText: "What location didn’t Walter and Jesse not cook in?",
+            answerChoices: ["A laundromat", "The high school lab", "An RV", "People’s homes"],
             correctAnswer: 1
         },
     // question 2
         {
-            questionText: Who killed Gus?
-            answerChoices: Jesse, Hector, Walter jr., Saul
+            questionText: "Who killed Gus?",
+            answerChoices: ["Jesse", "Hector", "Walter jr.", "Saul"],
             correctAnswer: 1
         },
     // question 3
         {
-            questionText: What writer is quoted in the small book Hank finds in Walters bathroom?
-            answerChoices: Walt Whitman, George R.R Martin, Jayden Smith, Edgar Allan Poe
+            questionText: "What writer is quoted in the small book Hank finds in Walters bathroom?",
+            answerChoices: ["Walt Whitman", "George R.R Martin", "Jayden Smith", "Edgar Allan Poe"],
             correctAnswer: 0
         },
     // question 4
         {
-            questionText: How does Walter know Jesse?
-            answerChoices: Met him at a riding go-karts, Former racquetball partners, Skylar’s former lover, Walter was his chemistry teacher
+            questionText: "How does Walter know Jesse?",
+            answerChoices: ["Met him at a riding go-karts", "Former racquetball partners", "Skylar’s former lover", "Walter was his chemistry teacher"],
             correctAnswer: 3
         },
     // question 5
         {
-            questionText: What is Jesse’s favorite word?
-            answerChoices: “Noodles!”, “B*tch!”, “Dawg”, “Zoinks!”
+            questionText: "What is Jesse’s favorite word?",
+            answerChoices: ["Noodles!", "B*tch!", "Dawg", "Zoinks!"],
             correctAnswer: 2     
         }
     ];
+
+var questionNumber = 1;
+var correctAnswers = 0
+
+$(document).ready(function(event){
+    $(".main").hide();
+    $(".opening-text").show();
+
+    $("body").on('click', '.start-button', function(event){
+        $(".main").hide();
+        $(".questions-text").show();
+        startQuiz();
+    });
+
+    // on click to submit answer
+        // increment question number
+        // iterate to next question
+        // adjust corrects answers var
+
+});
+
+if (value === "0"){
+    $(".")
+}
+
+// Hide Quiz game and Show Results
+// function hideMain() {
+// }
+
+// // Start the quiz button function
+function startQuiz(){
+    $(".question").text(questionsArr[0].questionText);
+    $(".question-number").text("Question " + questionNumber + " of 5")
+
+    // $(".answer-choices").append(questionsArr[0].answerChoices[0]);
+}
+
+// // Add to question counter and check if right answer
+// function questionCounter(){
+// }
+
+// // Go to next question after next button 
+// function nextQuestion() {
+// }
+
 // Spoiler Alert
 // Requirements:
 //     Requires the user to answer at least five questions
