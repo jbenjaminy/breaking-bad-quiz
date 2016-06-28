@@ -10,14 +10,13 @@ body {
 }
 
 .main {
-	max-width: 400px;
+	max-width: 420px;
 	min-height: 300px;
 	background-color: lightgray;
-	opacity: .5;
 	border: black 3px solid;
 	border-radius: 10px;
 	margin: 4.5em auto;
-	padding: 0px 4em;
+	padding: 3em 4em;
 }
 
 .questions-text,
@@ -50,4 +49,34 @@ button {
 .button {
 	text-align: center;
 	margin-top: 2em;
+}
+
+.logo {
+	margin-top: 2em;
+}
+
+.choiceList {
+	width: 240px;
+	display: inline-block;
+	float: left;
+	position: relative;
+	padding-top: 18px;
+}
+
+.icon {
+	width: 160px;
+	height: 140px;
+}
+
+.iconDiv {
+	width: 160px;
+	height: 140px;
+	display: inline-block;
+	float: right;
+	margin: 1em 0 0 16em;
+	position: fixed;
+}
+
+input[type="radio"] {
+	margin-top: 1em;
 }
