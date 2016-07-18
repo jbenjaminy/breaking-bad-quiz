@@ -106,8 +106,8 @@ function soundClip() {
     $("#yeah")[0].play();
 };
 
-function soundClip2() {
-    $("#right")[0].volume = 0.4;
-    $("#right")[0].load();
-    $("#right")[0].play();
-};
+// function soundClip2() {
+//     $("#right")[0].volume = 0.4;
+//     $("#right")[0].load();
+//     $("#right")[0].play();
+// };
